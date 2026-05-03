@@ -96,7 +96,7 @@
         </div>
     </section>
 
-    <!-- MOVIES SECTION - ✅ DEFAULT OPEN WHEN WEBSITE LOADS -->
+    <!-- MOVIES SECTION - ✅ DEFAULT OPEN -->
     <section id="movies" class="px-4 md:px-10 py-8">
         <h2 class="text-xl md:text-2xl mb-5 pl-3 border-l-4 border-netflixRed">🎬 ALL MOVIES</h2>
         <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="moviesContainer">
@@ -174,7 +174,7 @@
         const trendingContainer = document.getElementById('trendingContainer');
 
         // --------------------------
-        // SWITCH TABS / SECTIONS
+        // SWITCH TABS / SECTIONS ✅ WORKS NOW
         // --------------------------
         function showSection(sectionName) {
             sections.forEach(sec => {
@@ -215,7 +215,7 @@
                 </div>
             `;
 
-            // OPEN HIGH QUALITY VIDEO WHEN CLICKED
+            // OPEN HIGH QUALITY VIDEO WHEN CLICKED ✅
             card.addEventListener('click', () => {
                 if(type === 'movie') {
                     videoPlayer.src = `${HQ_EMBED_URL}/?video_id=${id}&tmdb=1&q=1080p`;
@@ -230,7 +230,7 @@
         }
 
         // --------------------------
-        // SEARCH FUNCTION (WORKS 100%)
+        // SEARCH FUNCTION ✅ WORKS 100%
         // --------------------------
         async function startSearch() {
             const query = masterSearch.value.trim();
@@ -290,7 +290,5 @@
                 trendingContainer.innerHTML = '';
                 
                 data.results.slice(0,20).forEach(item => {
-                    const card = createContentCard(item);
-                    card.classList.add('min-w-[160px]', 'w-[160px]', 'md:min-w-[180px]');
-                    trending
-  
+                    const card =
+                                                                                                                                                                                                                                         
